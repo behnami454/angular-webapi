@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "frontendd"
+    }
+  },
+  "defaultProject": "frontendd",
+  "cli": {
+    "analytics": false
+  }
 }
