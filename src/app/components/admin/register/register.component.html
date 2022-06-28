@@ -1,0 +1,144 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">
+            <a href="/" id="navbarBrandLogo">Fc Realcelona</a>
+        </a>
+        <div class="container-fluid" id="contaier-fluid-page">
+            <ul class="nav navbar-nav" id="navbarStyle" style="float: right;">
+                <li><a id="len1" class="hoverable" href="#" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">home</a></li>
+                <li><a id="len2" class="hoverable" routerLink="/stadium" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">stadium</a></li>
+                <li><a id="len3" class="hoverable" routerLink="/cups" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">cups</a></li>
+                <li><a id="len4" class="hoverable" routerLink="/legends" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">legends</a></li>
+                <li><a id="len5" class="hoverable" routerLink="/articles" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">articles</a></li>
+                <li><a id="len6" class="hoverable" routerLink="/contact" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row mt-4" id="registerStyle">
+        <div class="col-md-6">
+            <form [formGroup]="adminService.formModel" autocomplete="off" (submit)="onSubmit()">
+                <div class="form-group required">
+                    <label>Username</label>
+                    <input class="form-control" formControlName="UserName">
+                    <label class="text-danger" *ngIf="adminService.formModel.get('UserName').touched && adminService.formModel.get('UserName').errors?.required">This field is mandatory.</label>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input class="form-control" formControlName="Email">
+                    <label class="text-danger" *ngIf="adminService.formModel.get('Email').touched && adminService.formModel.get('Email').errors?.email">Invalid email address.</label>
+                </div>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input class="form-control" formControlName="FullName">
+                </div>
+                <div formGroupName="Passwords">
+                    <div class="form-group required">
+                        <label>Password</label>
+                        <input type="password" class="form-control" formControlName="Password">
+                        <label class="text-danger" *ngIf="adminService.formModel.get('Passwords.Password').touched && adminService.formModel.get('Passwords.Password').errors?.required">This field is mandatory.</label>
+                        <label class="text-danger" *ngIf="adminService.formModel.get('Passwords.Password').touched && adminService.formModel.get('Passwords.Password').errors?.minlength">Minimum 4 characters required.</label>
+                    </div>
+                    <div class="form-group required">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" formControlName="ConfirmPassword">
+                        <label class="text-danger" *ngIf="adminService.formModel.get('Passwords.ConfirmPassword').touched && adminService.formModel.get('Passwords.ConfirmPassword').errors?.required">This field is mandatory.</label>
+                        <label class="text-danger" *ngIf="adminService.formModel.get('Passwords.ConfirmPassword').touched && adminService.formModel.get('Passwords.ConfirmPassword').errors?.passwordMismatch">Confirm Password does not match.</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-8 offset-md-2">
+                        <button type="submit" class="btn btn-lg btn-block" [disabled]="!adminService.formModel.valid">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- start of footer -->
+    <div class="containerr my-5" id="footerDiv" style="width: 100%;">
+        <footer class="bg-dark text-center text-lg-start text-white" style="width: 100%;">
+            <div class="container p-4" style="text-align:center;">
+                <div class="row mt-4">
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <a routerLink="/contact">
+                            <h5 class="text-uppercase" style="font-size: 1.5rem;">contact</h5>
+                        </a>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>contact1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>contact2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-user-edit fa-fw fa-sm me-2"></i>contact3</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <a routerLink="/articles">
+                            <h5 class="text-uppercase" style="font-size: 1.5rem;">article</h5>
+                        </a>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>article1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-backspace fa-fw fa-sm me-2"></i>article2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>article3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>article4</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <a routerLink="/">
+                            <h5 class="text-uppercase" style="font-size: 1.5rem;">home</h5>
+                        </a>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="text-white">admin</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">admin1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">admin2</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <a routerLink="/contact">
+                            <h5 class="text-uppercase" style="font-size: 1.5rem;">legends</h5>
+                        </a>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>cups</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>stadium</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-envelope fa-fw fa-sm me-2"></i>stadium2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2022 Copyright:
+                <a style="color: #9e9ee7;" href="/">Iran Kerman</a>
+            </div>
+        </footer>
+
+    </div>
+    <!-- End of footer -->

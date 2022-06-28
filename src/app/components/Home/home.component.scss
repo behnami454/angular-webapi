@@ -1,0 +1,30 @@
+#clubName {
+    position: absolute;
+    margin-top: 31%;
+    margin-left: 46%;
+}
+
+#clubPages {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 34%;
+    margin-left: 29%;
+}
+
+#frontPageButton {
+    padding: 1rem 2rem;
+    background: white;
+    border: 3px solid black;
+    color: black;
+    font-size: 1.4rem;
+}
+
+#frontPageButton:hover {
+    background-color: black;
+    color: white;
+}

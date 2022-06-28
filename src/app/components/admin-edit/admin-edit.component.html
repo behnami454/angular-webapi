@@ -1,0 +1,26 @@
+<!-- <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand text-white">JWT Auth System</a>
+    <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
+</nav> -->
+
+<div id="navbarAdminPage">
+    <div>Admin Page</div>
+    <div><button class="btn btn-danger my-2 my-sm-0" style="padding: 1rem;" (click)="onLogout()">Logout</button></div>
+</div>
+
+<!-- <div class="card m-5" style="width:18rem" *ngIf="UserList">
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Username : </strong>{{userDetails.userName}}</li>
+        <li class="list-group-item"><strong>FullName : </strong>{{userDetails.fullName}}</li>
+        <li class="list-group-item"><strong>Email : </strong>{{userDetails.email}}</li>
+    </ul>
+</div> -->
+
+<div id="editPages">
+    <a routerLink="/adminEdit/contactEdit" class="btn btn-outline-dark" id="EditPageButton" type="button">contactEdit</a>
+    <a routerLink="/adminEdit/stadiumEdit" class="btn btn-outline-dark" id="EditPageButton" type="button">stadiumEdit</a>
+    <a routerLink="/adminEdit/articleEdit" class="btn btn-outline-dark" id="EditPageButton" type="button">articleEdit</a>
+    <a routerLink="/adminEdit/cupsEdit" class="btn btn-outline-dark" id="EditPageButton" type="button">cupsEdit</a>
+    <a routerLink="/adminEdit/legendsEdit" class="btn btn-outline-dark" id="EditPageButton" type="button">legendsEdit</a>
+    <a href="#" class="btn btn-outline-dark" id="EditPageButton" type="button">Home</a>
+</div>

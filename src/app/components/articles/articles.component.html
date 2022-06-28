@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">
+            <a href="/" id="navbarBrandLogo" style="position: absolute; right: 90%">Fc Realcelona</a>
+        </a>
+        <div class="container-fluid" id="contaier-fluid-page">
+            <ul class="nav navbar-nav" id="navbarStyle" style="float: right;">
+                <li><a id="len1" class="hoverable" href="#" style="color: white; padding: 10px 10px; margin-top: 1rem;">home</a></li>
+                <li><a id="len2" class="hoverable" routerLink="/stadium" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">stadium</a></li>
+                <li><a id="len3" class="hoverable" routerLink="/cups" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">cups</a></li>
+                <li><a id="len4" class="hoverable" routerLink="/legends" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">legends</a></li>
+                <li><a id="len5" class="hoverable" routerLink="/articles" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">articles</a></li>
+                <li><a id="len6" class="hoverable" routerLink="/contact" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<mat-progress-spinner [mode]="'indeterminate'" *ngIf="loading$ | async"></mat-progress-spinner>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<div style="display: flex; margin-top: 2rem;" data-aos="fade-up " data-aos-duration="3000 ">
+    <section class="page-contain " *ngFor="let dataItem of ArticlesList ">
+        <div href="# " class="data-card ">
+            <h3>{{dataItem.ArticleName}}</h3>
+            <h4>{{dataItem.ArticleDiscription}}</h4>
+        </div>
+    </section>
+</div>
+
+<!-- start of footer -->
+
+<!-- End of footer -->
+
+
+
+<script>
+    $(function() {
+        var str = '#len'; //increment by 1 up to 1-nelemnts
+        $(document).ready(function() {
+            var i, stop;
+            i = 1;
+            stop = 6; //num elements
+            setInterval(function() {
+                if (i > stop) {
+                    return;
+                }
+                $('#len' + (i++)).toggleClass('bounce');
+            }, 500)
+        });
+    });
+</script>

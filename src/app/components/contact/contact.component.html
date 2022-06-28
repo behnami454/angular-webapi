@@ -1,0 +1,162 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">
+            <a href="/" id="navbarBrandLogo">Fc Realcelona</a>
+        </a>
+        <div class="container-fluid" id="contaier-fluid-page">
+            <ul class="nav navbar-nav" id="navbarStyle" style="float: right;">
+                <li><a id="len1" class="hoverable" href="#" style="color: white; padding: 10px 10px; margin-top: 1rem;">home</a></li>
+                <li><a id="len2" class="hoverable" routerLink="/stadium" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">stadium</a></li>
+                <li><a id="len3" class="hoverable" routerLink="/cups" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">cups</a></li>
+                <li><a id="len4" class="hoverable" routerLink="/legends" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">legends</a></li>
+                <li><a id="len5" class="hoverable" routerLink="/articles" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">articles</a></li>
+                <li><a id="len6" class="hoverable" routerLink="/contact" style="color: white; padding: 10px 10px; margin-top: 1rem; text-decoration: none;">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- <mat-progress-spinner [mode]="'indeterminate'"></mat-progress-spinner> -->
+    <div id="clubDiscription">
+        <h4>
+            Fc Realcelona is one of the best teams in Italy and a greate history and legends with alot od cups and greate stadiums for training and competion . this team was founded in 1900 in city of Milan . and by the first year team was allowed to come to the
+            first level of the league wivh called Serie A . then after years of hard work and good signings they managed to become the champion and get a ticket of going to Europian matches where all glory has come to them by winning it several times
+            and be the greates team there
+        </h4>
+    </div>
+
+    <div id="contactInContactPage" data-aos="fade-up" data-aos-duration="3000">
+        <div id="contactInContactPageDetials">
+            <div>email:</div>
+            <div>realcelona@gmail.com</div>
+        </div>
+        <div id="contactInContactPageDetials">
+            <div>address:</div>
+            <div>italy.Milan</div>
+        </div>
+        <div id="contactInContactPageDetials">
+            <div>phone:</div>
+            <div>123456789</div>
+        </div>
+    </div>
+
+    <form novalidate id="formContact">
+        <div class="form-group">
+            <label>email</label>
+            <input type="email" class="form-control" name="ContactEmail" id="ContactEmail" ngModel>
+        </div>
+        <div class="form-group">
+            <label>message</label>
+            <input type="text" class="form-control" style="padding: 3rem;" name="ContactDescription" id="ContactDescription" ngModel>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block">Submit</button>
+        </div>
+    </form>
+
+
+    <!-- start of footer -->
+    <div class="containerr my-5" id="footerDiv" style="width: 98%;">
+        <footer class="bg-dark text-center text-lg-start text-white" style="width: 100%;">
+            <div class="container p-4" style="text-align:center;">
+                <div class="row mt-4">
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <a routerLink="/contact">
+                            <h5 class="text-uppercase" style="font-size: 1.5rem;">contact</h5>
+                        </a>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>contact1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>contact2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-user-edit fa-fw fa-sm me-2"></i>contact3</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <a routerLink="/articles">
+                            <h5 class="text-uppercase" style="font-size: 1.5rem;">article</h5>
+                        </a>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>article1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-backspace fa-fw fa-sm me-2"></i>article2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>article3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>article4</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <a routerLink="/">
+                            <h5 class="text-uppercase" style="font-size: 1.5rem;">home</h5>
+                        </a>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="text-white">admin</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">admin1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">admin2</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <a routerLink="/contact">
+                            <h5 class="text-uppercase" style="font-size: 1.5rem;">legends</h5>
+                        </a>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>cups</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>stadium</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fas fa-envelope fa-fw fa-sm me-2"></i>stadium2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2022 Copyright:
+                <a style="color: #9e9ee7;" href="/">Iran Kerman</a>
+            </div>
+        </footer>
+
+    </div>
+    <!-- End of footer -->
+
+    <script>
+        $(function() {
+            var str = '#len'; //increment by 1 up to 1-nelemnts
+            $(document).ready(function() {
+                var i, stop;
+                i = 1;
+                stop = 6; //num elements
+                setInterval(function() {
+                    if (i > stop) {
+                        return;
+                    }
+                    $('#len' + (i++)).toggleClass('bounce');
+                }, 500)
+            });
+        });
+    </script>

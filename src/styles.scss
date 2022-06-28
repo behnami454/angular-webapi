@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    font-family: 'Poppins';
+}
+
+#renderCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    overflow-x: hidden;
+}
+
+.mat-progress-spinner {
+    position: absolute;
+    top: 37%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    color: black;
+}
+
+#footerDiv {
+    // position: absolute;
+    bottom: 0;
+    width: 97%;
+    background: black;
+    color: white;
+    padding: 1.5rem;
+}
+
+
+/* Importing Bootstrap SCSS file. */
+
+@import '~bootstrap/scss/bootstrap';
+#contaier-fluid-page {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+}

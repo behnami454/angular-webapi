@@ -1,0 +1,29 @@
+#EditPageButton {
+    padding: 1.2rem;
+    color: white;
+    border: 2px solid white;
+    font-size: 1.2rem;
+}
+
+#editPages {
+    color: white;
+    display: flex;
+    gap: 1rem;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #585a76;
+}
+
+#navbarAdminPage {
+    display: flex;
+    gap: 7rem;
+    background: black;
+    color: white;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border: 5px solid #dadadf;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,36 @@
+<div id="editPages">
+    <a routerLink="/adminEdit/contactEdit" class="btn btn-outline-dark" id="EditPageButton" type="button">contactEdit</a>
+    <a routerLink="/adminEdit/stadiumEdit" class="btn btn-outline-dark" id="EditPageButton" type="button">stadiumEdit</a>
+    <a routerLink="/adminEdit/articleEdit" class="btn btn-outline-dark" id="EditPageButton" type="button">articleEdit</a>
+    <a routerLink="/adminEdit/cupsEdit" class="btn btn-outline-dark" id="EditPageButton" type="button">cupsEdit</a>
+    <a routerLink="/adminEdit/legendsEdit" class="btn btn-outline-dark" id="EditPageButton" type="button">legendsEdit</a>
+    <a href="#" class="btn btn-outline-dark" id="EditPageButton" type="button">Home</a>
+</div>
+
+
+<table class="table table-striped" id="tableEdit">
+    <thead>
+        <tr>
+            <th>ArticleId</th>
+            <th>ArticleName</th>
+            <th>ArticleDeiscription</th>
+            <th>ArticleCreateDate</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of ArticlesList">
+            <td>{{dataItem.ArticleId}}</td>
+            <td>{{dataItem.ArticleName}}</td>
+            <td>{{dataItem.ArticleDescription}}</td>
+            <td>{{dataItem.ArticlesCreateDate}}</td>
+            <td>
+                <button type="button" class="btn btn-light mr-1" (click)="deleteClick(dataItem)">
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+                  </svg>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
